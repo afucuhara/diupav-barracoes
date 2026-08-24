@@ -118,9 +118,7 @@ h1 em { color: var(--green); font-style: normal; }
 .footer-main .brand { margin-bottom: 23px; }
 .footer-main > div { display: flex; flex-direction: column; align-items: flex-start; }
 .footer-main > div:first-child p { max-width: 300px; }
-.footer-main strong { display: flex; align-items: center; gap: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: .13em; color: var(--green-dark); margin-bottom: 20px; }
-.footer-main strong .whatsapp-icon { width: 17px; height: 17px; }
-.footer-symbol { font-size: 18px; line-height: 1; color: var(--green); }
+.footer-main strong { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .13em; color: var(--green-dark); margin-bottom: 20px; }
 .footer-main p, .footer-main a { color: #64709a; line-height: 1.65; font-size: 15px; margin: 0 0 10px; }
 .footer-main a:hover { color: var(--green-dark); }
 .footer-bottom { border-top: 1px solid var(--line); padding-top: 20px; display: flex; justify-content: space-between; color: #7b89a6; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }

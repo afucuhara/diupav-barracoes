@@ -83,9 +83,9 @@ export function SiteFooter() {
       <footer className="site-footer">
       <div className="footer-main">
         <div><Brand /><p>Estruturas pré-moldadas e metálicas para construir com segurança, qualidade e confiança.</p></div>
-        <div><strong><span className="footer-symbol" aria-hidden="true">⌂</span>Navegação</strong><a href="/sobre">A empresa</a><a href="/servicos">Serviços</a><a href="/produtos">Produtos</a><a href="/contato">Contato</a></div>
-        <div><strong><WhatsAppIcon />Atendimento por WhatsApp</strong><a href="https://wa.me/5541988375050" target="_blank" rel="noreferrer">Antonio · (41) 98837-5050</a><a href="https://wa.me/5541992021680" target="_blank" rel="noreferrer">Ingrid · (41) 99202-1680</a></div>
-        <div><strong><span className="footer-symbol" aria-hidden="true">⌖</span>Onde estamos</strong><p>Rua Oito, Distrito Mato Branco<br />Contenda / Paraná<br />CEP 83730-000</p></div>
+        <div><strong>Navegação</strong><a href="/sobre">A empresa</a><a href="/servicos">Serviços</a><a href="/produtos">Produtos</a><a href="/contato">Contato</a></div>
+        <div><strong>Atendimento por WhatsApp</strong><a href="https://wa.me/5541988375050" target="_blank" rel="noreferrer">Antonio · (41) 98837-5050</a><a href="https://wa.me/5541992021680" target="_blank" rel="noreferrer">Ingrid · (41) 99202-1680</a></div>
+        <div><strong>Onde estamos</strong><p>Rua Oito, Distrito Mato Branco<br />Contenda / Paraná<br />CEP 83730-000</p></div>
       </div>
       <div className="footer-bottom"><span>© {new Date().getFullYear()} DiuPav Barracões</span><span>Contenda · Lapa · Região</span></div>
       </footer>
