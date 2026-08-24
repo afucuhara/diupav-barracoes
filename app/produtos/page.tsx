@@ -21,7 +21,7 @@ const products = [
 export default function ProductsPage() {
   return <main>
     <PageHero active="produtos" eyebrow="Produtos sob encomenda" title="Estruturas feitas para atender o seu projeto" text="Produtos pré-moldados e metálicos para diferentes aplicações, fabricados conforme a necessidade de cada cliente." />
-    <section className="product-section"><div className="section-kicker">01 — Catálogo de produtos</div><div className="product-grid">{products.map(([title, text], index) => <article key={title}><div className="product-top"><span>{String(index + 1).padStart(2, '0')}</span><i aria-hidden="true">↗</i></div><div className="product-shape" aria-hidden="true"><span /><span /><span /></div><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+    <section className="product-section"><div className="section-kicker">Catálogo de produtos</div><div className="product-grid">{products.map(([title, text]) => <article key={title}><div className="product-top"><i aria-hidden="true">↗</i></div><div className="product-shape" aria-hidden="true"><span /><span /><span /></div><h3>{title}</h3><p>{text}</p></article>)}</div></section>
     <section className="custom-product"><span>PROJETO ESPECIAL</span><div><h2>Precisa de uma solução específica?</h2><p>Trabalhamos com produtos sob encomenda e podemos avaliar a necessidade do seu projeto.</p></div></section>
     <BudgetCta /><SiteFooter />
   </main>;

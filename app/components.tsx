@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useRef, type ReactNode } from 'react';
 import { whatsappUrl } from './site-data';
 
 type Page = 'inicio' | 'sobre' | 'servicos' | 'produtos' | 'contato';
@@ -30,7 +33,7 @@ export function SiteHeader({ active = 'inicio', light = false }: { active?: Page
       <nav className="main-nav" aria-label="Navegação principal">
         {nav.map(([key, href, label]) => <a className={active === key ? 'active' : ''} href={href} key={key}>{label}</a>)}
       </nav>
-      <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">Solicitar orçamento <span aria-hidden="true">↗</span></a>
+      <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer"><span className="whatsapp-icon" aria-hidden="true">✆</span> Solicitar orçamento</a>
       <details className="mobile-menu">
         <summary aria-label="Abrir menu"><span /><span /><span /></summary>
         <nav aria-label="Navegação móvel">
@@ -62,7 +65,7 @@ export function BudgetCta() {
       <div className="section-kicker light-kicker">PRONTO PARA COMEÇAR?</div>
       <h2>Tem um projeto<br /><em>em mente?</em></h2>
       <p>Fale com a DiuPav Barracões e encontre a solução ideal em estruturas pré-moldadas e metálicas para sua necessidade.</p>
-      <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Solicitar orçamento pelo WhatsApp <span aria-hidden="true">↗</span></a>
+      <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer"><span className="whatsapp-icon" aria-hidden="true">✆</span> Solicitar orçamento pelo WhatsApp</a>
       <div className="cta-frame" aria-hidden="true"><i /><i /><i /></div>
     </section>
   );
@@ -72,7 +75,7 @@ export function SiteFooter() {
   return (
     <>
       <a className="whatsapp-float" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Solicitar orçamento pelo WhatsApp">
-        <span aria-hidden="true">W</span><strong>WhatsApp</strong>
+        <span className="whatsapp-icon" aria-hidden="true">✆</span>
       </a>
       <footer className="site-footer">
       <div className="footer-main">
@@ -85,4 +88,21 @@ export function SiteFooter() {
       </footer>
     </>
   );
+}
+
+export function Reveal({ children, variant = 'up', className = '' }: { children: ReactNode; variant?: 'up' | 'left' | 'right' | 'scale'; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        node.classList.add('is-visible');
+        observer.unobserve(node);
+      }
+    }, { threshold: 0.14 });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+  return <div ref={ref} data-reveal={variant} className={className}>{children}</div>;
 }
