@@ -1,0 +1,79 @@
+import { whatsappUrl } from './site-data';
+
+type Page = 'inicio' | 'sobre' | 'servicos' | 'produtos' | 'contato';
+
+const nav = [
+  ['inicio', '/', 'Início'],
+  ['sobre', '/sobre', 'A empresa'],
+  ['servicos', '/servicos', 'Serviços'],
+  ['produtos', '/produtos', 'Produtos'],
+  ['contato', '/contato', 'Contato'],
+] as const;
+
+export function Brand() {
+  return (
+    <span className="brand">
+      <span className="brand-mark" aria-hidden="true"><span /></span>
+      <span className="brand-copy"><strong>DIUPAV</strong><small>BARRACÕES</small></span>
+    </span>
+  );
+}
+
+export function SiteHeader({ active = 'inicio', light = false }: { active?: Page; light?: boolean }) {
+  return (
+    <header className={`site-header ${light ? 'header-light' : ''}`}>
+      <a href="/" aria-label="DiuPav Barracões — início"><Brand /></a>
+      <nav className="main-nav" aria-label="Navegação principal">
+        {nav.map(([key, href, label]) => <a className={active === key ? 'active' : ''} href={href} key={key}>{label}</a>)}
+      </nav>
+      <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">Solicitar orçamento <span aria-hidden="true">↗</span></a>
+      <details className="mobile-menu">
+        <summary aria-label="Abrir menu"><span /><span /><span /></summary>
+        <nav aria-label="Navegação móvel">
+          {nav.map(([key, href, label]) => <a className={active === key ? 'active' : ''} href={href} key={key}>{label}</a>)}
+        </nav>
+      </details>
+    </header>
+  );
+}
+
+export function PageHero({ eyebrow, title, text, active }: { eyebrow: string; title: string; text: string; active: Page }) {
+  return (
+    <>
+      <SiteHeader active={active} />
+      <section className="page-hero">
+        <div className="page-hero-grid" aria-hidden="true" />
+        <div className="eyebrow"><span /> {eyebrow}</div>
+        <h1>{title}</h1>
+        <p>{text}</p>
+        <div className="page-index" aria-hidden="true">DIUPAV / PR</div>
+      </section>
+    </>
+  );
+}
+
+export function BudgetCta() {
+  return (
+    <section className="budget-cta" id="contato">
+      <div className="section-kicker light-kicker">PRONTO PARA COMEÇAR?</div>
+      <h2>Tem um projeto<br /><em>em mente?</em></h2>
+      <p>Fale com a DiuPav Barracões e encontre a solução ideal em estruturas pré-moldadas e metálicas para sua necessidade.</p>
+      <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Solicitar orçamento pelo WhatsApp <span aria-hidden="true">↗</span></a>
+      <div className="cta-frame" aria-hidden="true"><i /><i /><i /></div>
+    </section>
+  );
+}
+
+export function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <div className="footer-main">
+        <div><Brand /><p>Estruturas pré-moldadas e metálicas para construir com segurança, qualidade e confiança.</p></div>
+        <div><strong>Navegação</strong><a href="/sobre">A empresa</a><a href="/servicos">Serviços</a><a href="/produtos">Produtos</a><a href="/contato">Contato</a></div>
+        <div><strong>Atendimento</strong><a href="tel:+5541988375050">Antonio · (41) 98837-5050</a><a href="tel:+5541992021680">Ingrid · (41) 99202-1680</a><a href="mailto:diupav@diupav.com.br">diupav@diupav.com.br</a></div>
+        <div><strong>Onde estamos</strong><p>Rua Oito, Distrito Mato Branco<br />Contenda / Paraná<br />CEP 83730-000</p></div>
+      </div>
+      <div className="footer-bottom"><span>© {new Date().getFullYear()} DiuPav Barracões</span><span>Contenda · Lapa · Região</span></div>
+    </footer>
+  );
+}
