@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef, type ReactNode } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { whatsappUrl } from './site-data';
 
 type Page = 'inicio' | 'sobre' | 'servicos' | 'contato';
@@ -12,35 +14,38 @@ const nav = [
   ['contato', '/contato', 'Contato'],
 ] as const;
 
-export function Brand() {
+export function Brand({ priority = false }: { priority?: boolean }) {
   return (
     <span className="brand">
-      <img
+      <Image
         src="/diupav-logo.png"
         alt="DiuPav Barracões"
-        width="2172"
-        height="724"
+        width={2172}
+        height={724}
+        priority={priority}
+        sizes="(max-width: 650px) 293px, 368px"
       />
     </span>
   );
 }
 
 export function WhatsAppIcon({ className = '' }: { className?: string }) {
-  return <img className={`whatsapp-icon ${className}`.trim()} src="/whatsapp.svg" alt="" aria-hidden="true" width="24" height="24" />;
+  return <Image className={`whatsapp-icon ${className}`.trim()} src="/whatsapp.svg" alt="" aria-hidden="true" width={24} height={24} unoptimized />;
 }
 
 export function SiteHeader({ active = 'inicio', light = false }: { active?: Page; light?: boolean }) {
   return (
     <header className={`site-header ${light ? 'header-light' : ''}`}>
-      <a href="/" aria-label="DiuPav Barracões — início"><Brand /></a>
+      <a className="skip-link" href="#main-content">Pular para o conteúdo</a>
+      <Link href="/" aria-label="DiuPav Barracões — início"><Brand priority /></Link>
       <nav className="main-nav" aria-label="Navegação principal">
-        {nav.map(([key, href, label]) => <a className={active === key ? 'active' : ''} href={href} key={key}>{label}</a>)}
+        {nav.map(([key, href, label]) => <Link className={active === key ? 'active' : ''} href={href} key={key}>{label}</Link>)}
       </nav>
       <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">Solicitar orçamento <WhatsAppIcon /></a>
       <details className="mobile-menu">
         <summary aria-label="Abrir menu"><span /><span /><span /></summary>
         <nav aria-label="Navegação móvel">
-          {nav.map(([key, href, label]) => <a className={active === key ? 'active' : ''} href={href} key={key}>{label}</a>)}
+          {nav.map(([key, href, label]) => <Link className={active === key ? 'active' : ''} href={href} key={key}>{label}</Link>)}
         </nav>
       </details>
     </header>
@@ -82,7 +87,7 @@ export function SiteFooter() {
       <footer className="site-footer">
       <div className="footer-main">
         <div><Brand /><p>Estruturas pré-moldadas e metálicas para construir com segurança, qualidade e confiança.</p></div>
-        <div><strong>Navegação</strong><a href="/sobre">A empresa</a><a href="/servicos">Serviços</a><a href="/contato">Contato</a></div>
+        <div><strong>Navegação</strong><Link href="/sobre">A empresa</Link><Link href="/servicos">Serviços</Link><Link href="/contato">Contato</Link></div>
         <div><strong>Atendimento por WhatsApp</strong><a href="https://wa.me/5541988375050" target="_blank" rel="noreferrer">Antonio · (41) 98837-5050</a><a href="https://wa.me/5541992021680" target="_blank" rel="noreferrer">Ingrid · (41) 99202-1680</a></div>
         <div><strong>Onde estamos</strong><p>Rua Oito, Distrito Mato Branco<br />Contenda / Paraná<br />CEP 83730-000</p></div>
       </div>

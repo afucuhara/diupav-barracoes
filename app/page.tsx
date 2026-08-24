@@ -1,6 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { BudgetCta, Reveal, SiteFooter, SiteHeader } from './components';
 import { services, whatsappUrl } from './site-data';
 
@@ -12,16 +14,24 @@ const differentials = [
 export default function Home() {
   const heroSlides = ['/images/hero-industrial-generated.png', '/images/estrutura-metalica.jpg', '/images/hero-barracao.jpg'];
   const [slide, setSlide] = useState(0);
+  const [previousSlide, setPreviousSlide] = useState<number | null>(null);
+  const transitionTimer = useRef<number | null>(null);
   useEffect(() => {
-    const timer = window.setInterval(() => setSlide((current) => (current + 1) % heroSlides.length), 7000);
-    return () => window.clearInterval(timer);
+    const timer = window.setInterval(() => setSlide((current) => {
+      setPreviousSlide(current);
+      if (transitionTimer.current) window.clearTimeout(transitionTimer.current);
+      transitionTimer.current = window.setTimeout(() => setPreviousSlide(null), 1800);
+      return (current + 1) % heroSlides.length;
+    }), 7000);
+    return () => { window.clearInterval(timer); if (transitionTimer.current) window.clearTimeout(transitionTimer.current); };
   }, [heroSlides.length]);
+  const visibleSlides = new Set([slide, previousSlide, (slide + 1) % heroSlides.length]);
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <SiteHeader active="inicio" />
       <section className="hero" id="inicio">
         <div className="hero-slides" aria-hidden="true">
-          {heroSlides.map((image, index) => <div key={image} className={`hero-slide ${index === slide ? 'active' : ''}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(6,11,27,.92) 0%, rgba(10,24,70,.78) 46%, rgba(0,33,250,.14) 100%), url('${image}')` }} />)}
+          {heroSlides.map((image, index) => visibleSlides.has(index) && <div key={image} className={`hero-slide ${index === slide ? 'active' : ''} ${index === previousSlide ? 'leaving' : ''}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(6,11,27,.92) 0%, rgba(10,24,70,.78) 46%, rgba(0,33,250,.14) 100%), url('${image}')` }} />)}
         </div>
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-content">
@@ -48,14 +58,15 @@ export default function Home() {
 
       <Reveal variant="scale"><section className="services-grid" aria-label="Serviços em destaque">
         {services.map((service) => (
-          <article className="service-card" key={service.number} style={{ backgroundImage: `linear-gradient(180deg, rgba(8,24,70,.08), rgba(8,24,70,.94)), url('${service.image}')` }}>
+          <article className="service-card" key={service.number}>
+            <Image className="service-card-image" src={service.image} alt="" fill sizes="(max-width: 650px) calc(100vw - 44px), (max-width: 980px) calc(50vw - 45px), 30vw" loading="lazy" />
             <h3>{service.title}</h3>
             <p>{service.short}</p>
-            <a href="/servicos">Saiba mais <span aria-hidden="true">↗</span></a>
+            <Link href="/servicos">Saiba mais <span aria-hidden="true">↗</span></Link>
           </article>
         ))}
       </section></Reveal>
-      <div className="section-action"><a className="text-link" href="/servicos">Ver todos os serviços <span>↗</span></a></div>
+      <div className="section-action"><Link className="text-link" href="/servicos">Ver todos os serviços <span>↗</span></Link></div>
 
       <Reveal variant="right"><section className="made-to-order">
         <div className="order-copy"><div className="section-kicker">Engenharia aplicada</div><h2>Seu projeto.<br />Nossa estrutura.</h2><p>Do barracão à estrutura metálica, dos fechamentos aos componentes complementares: produzimos cada solução pensando na realidade da sua operação.</p><a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Conversar sobre meu projeto</a></div>

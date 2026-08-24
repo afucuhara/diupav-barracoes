@@ -17,7 +17,7 @@ const contacts = [
 ];
 
 export default function ContactPage() {
-  return <main>
+  return <main id="main-content" tabIndex={-1}>
     <PageHero active="contato" eyebrow="Atendimento direto" title="Seu projeto começa com uma boa conversa" text="Fale exclusivamente pelo WhatsApp com a equipe da DiuPav Barracões. Um atendimento próximo para entender sua necessidade e indicar o melhor caminho." />
     <section className="whatsapp-contact-section">
       <div className="whatsapp-intro">

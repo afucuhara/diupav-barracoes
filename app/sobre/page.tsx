@@ -4,7 +4,7 @@ import { BudgetCta, PageHero, SiteFooter } from '../components';
 export const metadata: Metadata = { title: 'Sobre a DiuPav | Experiência, compromisso e qualidade', description: 'Conheça a atuação, missão, visão e os valores da DiuPav Barracões em Contenda e Lapa, Paraná.' };
 
 export default function AboutPage() {
-  return <main>
+  return <main id="main-content" tabIndex={-1}>
     <PageHero active="sobre" eyebrow="Sobre a DiuPav" title="Experiência, compromisso e qualidade em cada estrutura" text="Profissionais preparados para superar desafios, gerar resultados positivos e entregar soluções que valorizam cada projeto." />
     <section className="content-split">
       <div><div className="section-kicker">Nossa atuação</div><h2>Construímos relações tão sólidas quanto nossas estruturas.</h2></div>
