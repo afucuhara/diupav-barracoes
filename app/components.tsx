@@ -52,7 +52,7 @@ export function PageHero({ eyebrow, title, text, active }: { eyebrow: string; ti
   return (
     <>
       <SiteHeader active={active} />
-      <section className="page-hero">
+      <section className={`page-hero page-hero-${active}`}>
         <div className="page-hero-grid" aria-hidden="true" />
         <div className="eyebrow"><span /> {eyebrow}</div>
         <h1>{title}</h1>
