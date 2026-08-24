@@ -78,12 +78,12 @@ h1 em { color: var(--green); font-style: normal; }
 .section-action { display: flex; justify-content: flex-end; padding: 35px clamp(30px, 7vw, 108px) 105px; }
 .text-link { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding-bottom: 9px; border-bottom: 2px solid var(--green); display: inline-flex; gap: 28px; }
 
-.made-to-order { background: #edf3ff; color: var(--ink); min-height: 610px; display: grid; grid-template-columns: .9fr 1.1fr; overflow: hidden; border-block: 1px solid #dbe5ff; }
+.made-to-order { background: linear-gradient(90deg, #edf3ff 0%, rgba(237,243,255,.98) 38%, rgba(237,243,255,.52) 57%, rgba(237,243,255,.06) 73%), url('/images/hero-industrial-generated.png') center right/cover no-repeat; color: var(--ink); min-height: 610px; display: grid; grid-template-columns: .9fr 1.1fr; overflow: hidden; border-block: 1px solid #dbe5ff; }
 .order-copy { padding: 96px clamp(30px, 7vw, 108px); position: relative; z-index: 2; }
 .light-kicker { color: var(--lime); }
 .order-copy h2 { font-size: clamp(58px, 6vw, 86px); line-height: .88; }
 .order-copy p { max-width: 560px; color: #5d6e93; line-height: 1.65; font-size: 17px; margin: 25px 0 35px; }
-.order-art { border-left: 1px solid #d4e0ff; position: relative; min-height: 100%; background: linear-gradient(90deg, rgba(5,18,54,.58), rgba(5,18,54,.14)), url('/images/mezaninos.jpg') center/cover; }
+.order-art { position: relative; min-height: 100%; }
 .order-art i { position: absolute; font: normal 600 10px/1 var(--font-barlow); color: rgba(255,255,255,.45); }
 .order-art i:nth-of-type(1) { top: 25px; left: 25px; }.order-art i:nth-of-type(2) { top: 25px; right: 25px; }.order-art i:nth-of-type(3) { bottom: 25px; left: 25px; }.order-art i:nth-of-type(4) { bottom: 25px; right: 25px; }
 
@@ -106,14 +106,11 @@ h1 em { color: var(--green); font-style: normal; }
 .about-copy p { color: #5d6e93; max-width: 610px; font-size: 17px; line-height: 1.65; margin: 26px 0 40px; }
 .light-link { color: white; width: fit-content; }
 
-.budget-cta { min-height: 565px; padding: 90px clamp(30px, 7vw, 108px); background: linear-gradient(120deg, #2456ce 0%, #4d82e8 68%, #83b0f5 100%); color: white; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.budget-cta { min-height: 565px; padding: 90px clamp(30px, 7vw, 108px); background: linear-gradient(90deg, rgba(29,75,190,.94) 0%, rgba(52,105,213,.84) 48%, rgba(96,153,234,.64) 100%), url('/images/estrutura-metalica.jpg') center/cover; color: white; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
 .budget-cta h2 { font-size: clamp(66px, 8vw, 116px); line-height: .78; position: relative; z-index: 2; }
 .budget-cta h2 em { color: white; font-style: normal; opacity: .74; }
 .budget-cta p { max-width: 570px; color: rgba(255,255,255,.66); font-size: 17px; line-height: 1.6; margin: 34px 0; position: relative; z-index: 2; }
 .budget-cta .button { position: relative; z-index: 2; }
-.cta-frame { position: absolute; width: 48vw; height: 420px; right: -7vw; bottom: -80px; border: 15px solid rgba(0,33,250,.3); border-bottom: 0; transform: perspective(700px) rotateY(-18deg); }
-.cta-frame::after { content: ''; position: absolute; height: 15px; width: 130%; background: rgba(0,33,250,.26); top: 45%; left: -15%; transform: rotate(27deg); }
-.cta-frame i { position: absolute; width: 10px; height: 100%; background: rgba(0,33,250,.18); top: 0; }.cta-frame i:nth-child(1){left:25%}.cta-frame i:nth-child(2){left:50%}.cta-frame i:nth-child(3){left:75%}
 
 .site-footer { background: #ffffff; color: var(--ink); padding: 44px clamp(30px, 7vw, 108px) 16px; border-top: 1px solid #dbe5ff; }
 .site-footer .brand img { height: 78px; }
@@ -261,7 +258,7 @@ h1 em { color: var(--green); font-style: normal; }
   .order-copy { padding: 78px 22px; }.order-art { min-height: 300px; }
   .differentials { padding: 78px 22px; }.difference-list strong { font-size: 19px; }
   .about-number { padding: 55px 22px; min-height: 355px; }.about-number strong { font-size: 210px; }.about-copy { padding: 75px 22px; }
-  .budget-cta { padding: 82px 22px; min-height: 590px; }.budget-cta h2 { font-size: 68px; }.cta-frame { width: 85vw; opacity: .45; }
+  .budget-cta { padding: 82px 22px; min-height: 590px; }.budget-cta h2 { font-size: 68px; }
   .site-footer { padding: 40px 22px 18px; }.footer-main { grid-template-columns: 1fr; gap: 32px; padding-bottom: 28px; }.footer-bottom { flex-direction: column; gap: 10px; }
   .page-hero { min-height: 560px; padding: 150px 22px 70px; }.page-hero h1 { font-size: 60px; }.page-hero p { font-size: 16px; }
   .content-split { padding: 78px 22px; grid-template-columns: 1fr; gap: 35px; }.content-split h2, .catalog-intro h2, .values-section > h2 { font-size: 51px; }

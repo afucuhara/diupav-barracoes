@@ -70,7 +70,6 @@ export function BudgetCta() {
       <h2>Tem um projeto<br /><em>em mente?</em></h2>
       <p>Fale com a DiuPav Barracões e encontre a solução ideal em estruturas pré-moldadas e metálicas para sua necessidade.</p>
       <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Solicitar orçamento pelo WhatsApp</a>
-      <div className="cta-frame" aria-hidden="true"><i /><i /><i /></div>
     </section>
   );
 }
