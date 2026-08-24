@@ -55,7 +55,7 @@ export default function Home() {
           </article>
         ))}
       </section></Reveal>
-      <div className="section-action"><a className="text-link" href="/servicos">Ver todos os produtos e serviços <span>↗</span></a></div>
+      <div className="section-action"><a className="text-link" href="/servicos">Ver todos os serviços <span>↗</span></a></div>
 
       <Reveal variant="right"><section className="made-to-order">
         <div className="order-copy"><div className="section-kicker">Engenharia aplicada</div><h2>Seu projeto.<br />Nossa estrutura.</h2><p>Do barracão à estrutura metálica, dos fechamentos aos componentes complementares: produzimos cada solução pensando na realidade da sua operação.</p><a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Conversar sobre meu projeto</a></div>

@@ -135,6 +135,9 @@ h1 em { color: var(--green); font-style: normal; }
 .page-hero-sobre::after { display: none; }
 .page-hero-sobre .page-hero-grid { opacity: .035; }
 .page-hero-sobre .eyebrow span { display: none; }
+.page-hero-servicos { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.9) 46%, rgba(233,240,255,.34) 100%), url('/images/hero-industrial-generated.png') center/cover; }
+.page-hero-servicos::after, .page-hero-servicos .page-hero-grid, .page-hero-servicos .page-index { display: none; }
+.page-hero-servicos .eyebrow span { display: none; }
 .content-split { padding: 110px clamp(30px, 7vw, 108px); display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; }
 .content-split h2, .catalog-intro h2, .values-section > h2 { font-size: clamp(50px, 5.8vw, 82px); line-height: .93; }
 .rich-copy p { color: #565d70; font-size: 18px; line-height: 1.75; margin: 0 0 22px; }
