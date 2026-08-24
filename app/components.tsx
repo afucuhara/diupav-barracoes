@@ -26,6 +26,10 @@ export function Brand() {
   );
 }
 
+export function WhatsAppIcon({ className = '' }: { className?: string }) {
+  return <img className={`whatsapp-icon ${className}`.trim()} src="/whatsapp.svg" alt="" aria-hidden="true" width="24" height="24" />;
+}
+
 export function SiteHeader({ active = 'inicio', light = false }: { active?: Page; light?: boolean }) {
   return (
     <header className={`site-header ${light ? 'header-light' : ''}`}>
@@ -33,7 +37,7 @@ export function SiteHeader({ active = 'inicio', light = false }: { active?: Page
       <nav className="main-nav" aria-label="Navegação principal">
         {nav.map(([key, href, label]) => <a className={active === key ? 'active' : ''} href={href} key={key}>{label}</a>)}
       </nav>
-      <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer"><span className="whatsapp-icon" aria-hidden="true">✆</span> Solicitar orçamento</a>
+      <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer"><WhatsAppIcon /> Solicitar orçamento</a>
       <details className="mobile-menu">
         <summary aria-label="Abrir menu"><span /><span /><span /></summary>
         <nav aria-label="Navegação móvel">
@@ -65,7 +69,7 @@ export function BudgetCta() {
       <div className="section-kicker light-kicker">PRONTO PARA COMEÇAR?</div>
       <h2>Tem um projeto<br /><em>em mente?</em></h2>
       <p>Fale com a DiuPav Barracões e encontre a solução ideal em estruturas pré-moldadas e metálicas para sua necessidade.</p>
-      <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer"><span className="whatsapp-icon" aria-hidden="true">✆</span> Solicitar orçamento pelo WhatsApp</a>
+      <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer"><WhatsAppIcon /> Solicitar orçamento pelo WhatsApp</a>
       <div className="cta-frame" aria-hidden="true"><i /><i /><i /></div>
     </section>
   );
@@ -75,7 +79,7 @@ export function SiteFooter() {
   return (
     <>
       <a className="whatsapp-float" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Solicitar orçamento pelo WhatsApp">
-        <span className="whatsapp-icon" aria-hidden="true">✆</span>
+        <WhatsAppIcon />
       </a>
       <footer className="site-footer">
       <div className="footer-main">

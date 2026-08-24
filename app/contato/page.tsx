@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero, SiteFooter } from '../components';
+import { PageHero, SiteFooter, WhatsAppIcon } from '../components';
 
 export const metadata: Metadata = { title: 'Contato e Orçamento | DiuPav Barracões', description: 'Solicite seu orçamento diretamente pelo WhatsApp com a equipe da DiuPav Barracões.' };
 
@@ -28,7 +28,7 @@ export default function ContactPage() {
       </div>
       <div className="whatsapp-contact-grid">
         {contacts.map((contact) => <a href={contact.url} target="_blank" rel="noreferrer" key={contact.phone}>
-          <span className="whatsapp-mark" aria-hidden="true">W</span>
+          <span className="whatsapp-mark"><WhatsAppIcon /></span>
           <div><small>Falar com</small><h3>{contact.name}</h3><strong>{contact.phone}</strong></div>
           <i aria-hidden="true">↗</i>
         </a>)}

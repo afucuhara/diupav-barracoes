@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { BudgetCta, Reveal, SiteFooter, SiteHeader } from './components';
+import { BudgetCta, Reveal, SiteFooter, SiteHeader, WhatsAppIcon } from './components';
 import { services, whatsappUrl } from './site-data';
 
 const differentials = [
@@ -26,7 +26,7 @@ export default function Home() {
           <h1>Estruturas que dão <em>segurança</em> aos seus projetos</h1>
           <p>Barracões pré-moldados, estruturas metálicas e soluções sob encomenda para construir com resistência, qualidade e confiança.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer"><span className="whatsapp-icon" aria-hidden="true">✆</span> Solicite seu orçamento</a>
+            <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer"><WhatsAppIcon /> Solicite seu orçamento</a>
             <a className="button button-secondary" href="#solucoes"><span className="segment-icon" aria-hidden="true">⌂</span> Conheça nossas soluções</a>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function Home() {
       <div className="section-action"><a className="text-link" href="/servicos">Ver todos os produtos e serviços <span>↗</span></a></div>
 
       <Reveal variant="right"><section className="made-to-order">
-        <div className="order-copy"><div className="section-kicker">Engenharia aplicada</div><h2>Seu projeto.<br />Nossa estrutura.</h2><p>Do barracão à estrutura metálica, dos fechamentos aos componentes complementares: produzimos cada solução pensando na realidade da sua operação.</p><a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer"><span className="whatsapp-icon" aria-hidden="true">✆</span> Conversar sobre meu projeto</a></div>
+        <div className="order-copy"><div className="section-kicker">Engenharia aplicada</div><h2>Seu projeto.<br />Nossa estrutura.</h2><p>Do barracão à estrutura metálica, dos fechamentos aos componentes complementares: produzimos cada solução pensando na realidade da sua operação.</p><a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer"><WhatsAppIcon /> Conversar sobre meu projeto</a></div>
         <div className="order-art" aria-hidden="true" />
       </section></Reveal>
 
