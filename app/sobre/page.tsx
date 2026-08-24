@@ -15,7 +15,7 @@ export default function AboutPage() {
       <article><h3>Visão</h3><p>Ser uma empresa de referência nos mercados em que atua, por meio da qualidade de seus produtos, serviços e relacionamento.</p></article>
       <article><h3>Valores</h3><p>Ética nas transações;</p><p>Responsabilidade social com a adoção de posturas, comportamentos e ações que promovam o bem-estar dos nossos colaboradores e do público externo; Responsabilidade ambiental com atitudes que levam em conta o crescimento econômico ajustado à preservação do meio ambiente</p></article>
     </section>
-    <section className="recognition-block"><div className="recognition-five">5</div><div><div className="section-kicker light-kicker">Reconhecimento regional</div><h2>Confiança construída ano após ano.</h2><p>A DiuPav Barracões recebe há cinco anos consecutivos a premiação de destaque do ano em Contenda/PR e Lapa/PR nas categorias de pré-moldados e estrutura metálica.</p></div></section>
+    <section className="recognition-block"><div className="recognition-five"><strong>5</strong><span>anos</span></div></section>
     <BudgetCta /><SiteFooter />
   </main>;
 }

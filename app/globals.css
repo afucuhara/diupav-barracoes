@@ -134,6 +134,7 @@ h1 em { color: var(--green); font-style: normal; }
 .page-hero-sobre { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.89) 47%, rgba(233,240,255,.36) 100%), url('/images/hero-industrial-generated.png') center/cover; }
 .page-hero-sobre::after { display: none; }
 .page-hero-sobre .page-hero-grid { opacity: .035; }
+.page-hero-sobre .eyebrow span { display: none; }
 .content-split { padding: 110px clamp(30px, 7vw, 108px); display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; }
 .content-split h2, .catalog-intro h2, .values-section > h2 { font-size: clamp(50px, 5.8vw, 82px); line-height: .93; }
 .rich-copy p { color: #565d70; font-size: 18px; line-height: 1.75; margin: 0 0 22px; }
@@ -158,10 +159,13 @@ h1 em { color: var(--green); font-style: normal; }
 .values-grid article { min-height: 330px; padding: 28px; border-right: 1px solid var(--line); display: flex; flex-direction: column; }
 .values-grid h3 { margin-top: 85px; }
 .values-grid p { color: #64706c; line-height: 1.55; font-size: 14px; }
-.recognition-block { padding: 90px clamp(30px, 7vw, 108px); background: var(--green); color: white; display: grid; grid-template-columns: auto 1fr; gap: 8vw; align-items: center; }
-.recognition-five { font: 800 clamp(170px, 22vw, 320px)/.7 var(--font-barlow-condensed); letter-spacing: -.06em; }
+.recognition-block { min-height: 390px; padding: 72px clamp(30px, 7vw, 108px); background: var(--green); color: white; display: flex; justify-content: center; align-items: center; }
+.recognition-five { display: flex; align-items: flex-end; gap: clamp(20px, 3vw, 46px); text-transform: uppercase; }
+.recognition-five strong { font: 800 clamp(190px, 24vw, 350px)/.7 var(--font-barlow-condensed); letter-spacing: -.06em; }
+.recognition-five span { font: 700 clamp(38px, 5vw, 72px)/1 var(--font-barlow-condensed); letter-spacing: .04em; padding-bottom: clamp(22px, 3vw, 46px); }
 .recognition-block h2 { font-size: clamp(52px, 6vw, 86px); line-height: .9; }
 .recognition-block p { font-size: 17px; line-height: 1.65; max-width: 670px; }
+.budget-cta .light-kicker { color: white; }
 
 .catalog-intro { padding: 100px clamp(30px, 7vw, 108px) 75px; display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; align-items: end; }
 .catalog-intro .section-kicker { grid-column: 1 / -1; margin-bottom: 0; }
@@ -274,7 +278,7 @@ h1 em { color: var(--green); font-style: normal; }
   .mission-grid { margin: 0 22px 78px; grid-template-columns: 1fr; }.mission-grid article { padding: 33px; min-height: 320px; }.mission-grid article + article { border-left: 0; border-top: 1px solid var(--line); }.mission-grid h3 { margin-top: 55px; }
   .principles-grid { margin: 0 22px 78px; grid-template-columns: 1fr; }.principles-grid article { min-height: auto; padding: 32px; }.principles-grid article + article { border-left: 0; border-top: 1px solid var(--line); }
   .values-section { padding: 78px 22px; }.values-grid { grid-template-columns: 1fr; }.values-grid article { min-height: 270px; }.values-grid h3 { margin-top: 60px; }
-  .recognition-block { padding: 80px 22px; grid-template-columns: 1fr; }.recognition-five { font-size: 190px; }
+  .recognition-block { min-height: 280px; padding: 58px 22px; }.recognition-five strong { font-size: 205px; }.recognition-five span { font-size: 42px; padding-bottom: 26px; }
   .catalog-intro { padding: 78px 22px 55px; grid-template-columns: 1fr; gap: 22px; }.catalog-list { margin: 0 22px 78px; }.catalog-list article { grid-template-columns: 105px 1fr; gap: 18px; padding: 24px 0; }.catalog-list article:hover { padding-inline: 8px; }.catalog-photo { width: 105px; height: 92px; }.catalog-list h3 { font-size: 22px; }.catalog-list p { grid-column: 1 / -1; margin: 0; }
   .product-section { padding: 78px 22px; }.product-grid { grid-template-columns: 1fr; }.custom-product { padding: 65px 22px; grid-template-columns: 1fr; }.custom-product h2 { font-size: 54px; }
   .whatsapp-float { right: 16px; bottom: 16px; width: 58px; height: 58px; padding: 6px; }.whatsapp-float .whatsapp-icon { width: 44px; height: 44px; }
