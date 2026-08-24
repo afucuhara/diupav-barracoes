@@ -13,8 +13,12 @@ const nav = [
 export function Brand() {
   return (
     <span className="brand">
-      <span className="brand-mark" aria-hidden="true"><span /></span>
-      <span className="brand-copy"><strong>DIUPAV</strong><small>BARRACÕES</small></span>
+      <img
+        src="/diupav-logo.png"
+        alt="DiuPav Barracões"
+        width="2172"
+        height="724"
+      />
     </span>
   );
 }
