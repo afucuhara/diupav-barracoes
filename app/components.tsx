@@ -70,14 +70,19 @@ export function BudgetCta() {
 
 export function SiteFooter() {
   return (
-    <footer className="site-footer">
+    <>
+      <a className="whatsapp-float" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Solicitar orçamento pelo WhatsApp">
+        <span aria-hidden="true">W</span><strong>WhatsApp</strong>
+      </a>
+      <footer className="site-footer">
       <div className="footer-main">
         <div><Brand /><p>Estruturas pré-moldadas e metálicas para construir com segurança, qualidade e confiança.</p></div>
         <div><strong>Navegação</strong><a href="/sobre">A empresa</a><a href="/servicos">Serviços</a><a href="/produtos">Produtos</a><a href="/contato">Contato</a></div>
-        <div><strong>Atendimento</strong><a href="tel:+5541988375050">Antonio · (41) 98837-5050</a><a href="tel:+5541992021680">Ingrid · (41) 99202-1680</a><a href="mailto:diupav@diupav.com.br">diupav@diupav.com.br</a></div>
+        <div><strong>Atendimento por WhatsApp</strong><a href="https://wa.me/5541988375050" target="_blank" rel="noreferrer">Antonio · (41) 98837-5050</a><a href="https://wa.me/5541992021680" target="_blank" rel="noreferrer">Ingrid · (41) 99202-1680</a></div>
         <div><strong>Onde estamos</strong><p>Rua Oito, Distrito Mato Branco<br />Contenda / Paraná<br />CEP 83730-000</p></div>
       </div>
       <div className="footer-bottom"><span>© {new Date().getFullYear()} DiuPav Barracões</span><span>Contenda · Lapa · Região</span></div>
-    </footer>
+      </footer>
+    </>
   );
 }
