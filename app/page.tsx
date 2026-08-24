@@ -26,8 +26,8 @@ export default function Home() {
           <h1>Estruturas que dão <em>segurança</em> aos seus projetos</h1>
           <p>Barracões pré-moldados, estruturas metálicas e soluções sob encomenda para construir com resistência, qualidade e confiança.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer"><WhatsAppIcon /> Solicite seu orçamento</a>
-            <a className="button button-secondary" href="#solucoes"><span className="segment-icon" aria-hidden="true">⌂</span> Conheça nossas soluções</a>
+            <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Solicite seu orçamento</a>
+            <a className="button button-secondary" href="#solucoes">Conheça nossas soluções</a>
           </div>
         </div>
         <div className="hero-dots" aria-label="Imagens da hero">

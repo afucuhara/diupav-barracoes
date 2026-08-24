@@ -37,7 +37,7 @@ export function SiteHeader({ active = 'inicio', light = false }: { active?: Page
       <nav className="main-nav" aria-label="Navegação principal">
         {nav.map(([key, href, label]) => <a className={active === key ? 'active' : ''} href={href} key={key}>{label}</a>)}
       </nav>
-      <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer"><WhatsAppIcon /> Solicitar orçamento</a>
+      <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">Solicitar orçamento <WhatsAppIcon /></a>
       <details className="mobile-menu">
         <summary aria-label="Abrir menu"><span /><span /><span /></summary>
         <nav aria-label="Navegação móvel">
