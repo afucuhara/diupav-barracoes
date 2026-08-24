@@ -30,13 +30,8 @@ export default function ContactPage() {
         {contacts.map((contact) => <a href={contact.url} target="_blank" rel="noreferrer" key={contact.phone}>
           <span className="whatsapp-mark"><WhatsAppIcon /></span>
           <div><small>Falar com</small><h3>{contact.name}</h3><strong>{contact.phone}</strong></div>
-          <i aria-hidden="true">↗</i>
         </a>)}
       </div>
-    </section>
-    <section className="contact-reassurance">
-      <span>ATENDIMENTO PERSONALIZADO</span>
-      <h2>Conte sua necessidade.<br />Nós ajudamos a estruturar a solução.</h2>
     </section>
     <section className="location-map" aria-labelledby="location-map-title">
       <div className="location-map-copy"><div className="section-kicker">Localização</div><h2 id="location-map-title">Venha conhecer a DiuPav Industrial.</h2><p>Estamos em Contenda, Paraná. Use o mapa para traçar sua rota até nossa unidade.</p><a className="text-link" href="https://www.google.com/maps/place/DIUPAV+Industrial/@-25.6921162,-49.5104331,17z/data=!3m1!4b1!4m6!3m5!1s0x94dd07f1b05ba2eb:0xe4ca232e4a7f5a84!8m2!3d-25.6921162!4d-49.5104331!16s%2Fg%2F11rcl3__bf?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">Abrir no Google Maps <span aria-hidden="true">↗</span></a></div>

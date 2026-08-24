@@ -152,6 +152,9 @@ h1 em { color: var(--green); font-style: normal; }
 .page-hero-servicos { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.9) 46%, rgba(233,240,255,.34) 100%), url('/images/hero-industrial-generated.png') center/cover; }
 .page-hero-servicos::after, .page-hero-servicos .page-hero-grid, .page-hero-servicos .page-index { display: none; }
 .page-hero-servicos .eyebrow span { display: none; }
+.page-hero-contato { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.9) 46%, rgba(233,240,255,.34) 100%), url('/images/estrutura-metalica.jpg') center/cover; }
+.page-hero-contato::after, .page-hero-contato .page-hero-grid, .page-hero-contato .page-index { display: none; }
+.page-hero-contato .eyebrow span { display: none; }
 .content-split { padding: 110px clamp(30px, 7vw, 108px); display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; }
 .content-split h2, .catalog-intro h2, .values-section > h2 { font-size: clamp(50px, 5.8vw, 82px); line-height: .93; }
 .rich-copy p { color: #565d70; font-size: 18px; line-height: 1.75; margin: 0 0 22px; }
@@ -222,17 +225,13 @@ h1 em { color: var(--green); font-style: normal; }
 .contact-location span { color: var(--green); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; font-weight: 700; }
 .contact-location strong { font-size: 15px; }
 .whatsapp-contact-grid { display: grid; gap: 18px; }
-.whatsapp-contact-grid > a { min-height: 210px; background: white; border: 1px solid #dce5fb; padding: 34px; display: grid; grid-template-columns: auto 1fr auto; gap: 25px; align-items: center; box-shadow: 0 15px 35px rgba(16,40,92,.08); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.whatsapp-contact-grid > a { min-height: 210px; background: white; border: 1px solid #dce5fb; padding: 34px; display: grid; grid-template-columns: auto 1fr; gap: 25px; align-items: center; box-shadow: 0 15px 35px rgba(16,40,92,.08); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
 .whatsapp-contact-grid > a:hover { transform: translateY(-4px); border-color: #25d366; box-shadow: 0 20px 45px rgba(16,40,92,.13); }
 .whatsapp-contact-grid .whatsapp-mark { width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; background: #25d366; }
-.whatsapp-contact-grid .whatsapp-mark .whatsapp-icon { width: 38px; height: 38px; padding: 6px; border-radius: 50%; background: white; }
+.whatsapp-contact-grid .whatsapp-mark .whatsapp-icon { width: 44px; height: 44px; padding: 6px; filter: brightness(0) invert(1); }
 .whatsapp-contact-grid small { color: var(--green); text-transform: uppercase; letter-spacing: .12em; font-size: 10px; font-weight: 700; }
 .whatsapp-contact-grid h3 { margin: 10px 0 5px; font: 700 30px/1 var(--font-barlow-condensed); text-transform: uppercase; }
 .whatsapp-contact-grid strong { font-size: 16px; color: #56688f; }
-.whatsapp-contact-grid i { font-style: normal; font-size: 24px; color: var(--green); }
-.contact-reassurance { padding: 95px clamp(30px, 7vw, 108px); background: #eaf1ff; border-block: 1px solid #d7e3ff; display: grid; grid-template-columns: .45fr 1.55fr; gap: 6vw; align-items: start; }
-.contact-reassurance > span { color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .13em; }
-.contact-reassurance h2 { font-size: clamp(48px, 5.7vw, 82px); line-height: .92; }
 .location-map { padding: 105px clamp(30px, 7vw, 108px); display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(42px, 7vw, 100px); align-items: center; background: var(--white); }
 .location-map-copy h2 { max-width: 520px; font-size: clamp(48px, 5.5vw, 78px); line-height: .92; }
 .location-map-copy p { max-width: 470px; margin: 26px 0 34px; color: var(--text-body); font-size: 17px; line-height: 1.65; }
@@ -305,7 +304,7 @@ h1 em { color: var(--green); font-style: normal; }
   .catalog-intro { padding: 78px 22px 55px; grid-template-columns: 1fr; gap: 22px; }.catalog-list { margin: 0 22px 78px; }.catalog-list article { grid-template-columns: 105px 1fr; gap: 18px; padding: 24px 0; }.catalog-list article:hover { transform: none; }.catalog-photo { width: 105px; height: 92px; }.catalog-list h3 { font-size: 22px; }.catalog-list p { grid-column: 1 / -1; margin: 0; }
   .product-section { padding: 78px 22px; }.product-grid { grid-template-columns: 1fr; }.custom-product { padding: 65px 22px; grid-template-columns: 1fr; }.custom-product h2 { font-size: 54px; }
   .whatsapp-float { right: 16px; bottom: 16px; width: 58px; height: 58px; padding: 6px; }.whatsapp-float .whatsapp-icon { width: 44px; height: 44px; }
-  .whatsapp-contact-section { padding: 78px 22px; gap: 50px; }.whatsapp-contact-grid > a { padding: 24px 20px; grid-template-columns: auto 1fr; min-height: 180px; }.whatsapp-contact-grid > a > i { display: none; }.whatsapp-contact-grid h3 { font-size: 25px; }.contact-reassurance, .location-map { padding: 70px 22px; grid-template-columns: 1fr; gap: 28px; }.map-frame, .map-frame iframe { min-height: 330px; height: 330px; }
+  .whatsapp-contact-section { padding: 78px 22px; gap: 50px; }.whatsapp-contact-grid > a { padding: 24px 20px; grid-template-columns: auto 1fr; min-height: 180px; }.whatsapp-contact-grid h3 { font-size: 25px; }.location-map { padding: 70px 22px; grid-template-columns: 1fr; gap: 28px; }.map-frame, .map-frame iframe { min-height: 330px; height: 330px; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .hero-slide, [data-reveal], .button, .header-cta, .service-card, .catalog-list article, .whatsapp-float, .whatsapp-contact-grid > a { transition-duration: .01ms !important; } [data-reveal] { opacity: 1; transform: none; } }
