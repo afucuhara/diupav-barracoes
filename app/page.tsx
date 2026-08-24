@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { BudgetCta, Reveal, SiteFooter, SiteHeader, WhatsAppIcon } from './components';
+import { BudgetCta, Reveal, SiteFooter, SiteHeader } from './components';
 import { services, whatsappUrl } from './site-data';
 
 const differentials = [
@@ -19,7 +19,10 @@ export default function Home() {
   return (
     <main>
       <SiteHeader active="inicio" />
-      <section className="hero" id="inicio" style={{ backgroundImage: `linear-gradient(90deg, rgba(6,11,27,.92) 0%, rgba(10,24,70,.78) 46%, rgba(0,33,250,.14) 100%), url('${heroSlides[slide]}')` }}>
+      <section className="hero" id="inicio">
+        <div className="hero-slides" aria-hidden="true">
+          {heroSlides.map((image, index) => <div key={image} className={`hero-slide ${index === slide ? 'active' : ''}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(6,11,27,.92) 0%, rgba(10,24,70,.78) 46%, rgba(0,33,250,.14) 100%), url('${image}')` }} />)}
+        </div>
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-content">
           <div className="eyebrow hero-eyebrow">Construção inteligente. Estrutura forte.</div>
@@ -29,9 +32,6 @@ export default function Home() {
             <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Solicite seu orçamento</a>
             <a className="button button-secondary" href="#solucoes">Conheça nossas soluções</a>
           </div>
-        </div>
-        <div className="hero-dots" aria-label="Imagens da hero">
-          {heroSlides.map((image, index) => <button type="button" className={index === slide ? 'active' : ''} key={image} onClick={() => setSlide(index)} aria-label={`Exibir imagem ${index + 1}`} />)}
         </div>
       </section>
 
@@ -58,7 +58,7 @@ export default function Home() {
       <div className="section-action"><a className="text-link" href="/servicos">Ver todos os produtos e serviços <span>↗</span></a></div>
 
       <Reveal variant="right"><section className="made-to-order">
-        <div className="order-copy"><div className="section-kicker">Engenharia aplicada</div><h2>Seu projeto.<br />Nossa estrutura.</h2><p>Do barracão à estrutura metálica, dos fechamentos aos componentes complementares: produzimos cada solução pensando na realidade da sua operação.</p><a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer"><WhatsAppIcon /> Conversar sobre meu projeto</a></div>
+        <div className="order-copy"><div className="section-kicker">Engenharia aplicada</div><h2>Seu projeto.<br />Nossa estrutura.</h2><p>Do barracão à estrutura metálica, dos fechamentos aos componentes complementares: produzimos cada solução pensando na realidade da sua operação.</p><a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Conversar sobre meu projeto</a></div>
         <div className="order-art" aria-hidden="true" />
       </section></Reveal>
 
