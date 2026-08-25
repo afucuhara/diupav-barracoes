@@ -24,7 +24,6 @@ export default function ContactPage() {
       eyebrow="Atendimento direto"
       title="Seu projeto começa com uma boa conversa"
       text="Fale exclusivamente pelo WhatsApp com a equipe da DiuPav Barracões. Um atendimento próximo para entender sua necessidade e indicar o melhor caminho."
-      action={<a className="button button-primary contact-hero-cta" href={whatsappUrl} target="_blank" rel="noreferrer"><span>Solicitar orçamento no WhatsApp</span><WhatsAppIcon /></a>}
     />
     <section className="whatsapp-contact-section">
       <div className="whatsapp-intro">
