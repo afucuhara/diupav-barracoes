@@ -52,7 +52,7 @@ export function SiteHeader({ active = 'inicio', light = false }: { active?: Page
   );
 }
 
-export function PageHero({ eyebrow, title, text, active }: { eyebrow: string; title: string; text: string; active: Page }) {
+export function PageHero({ eyebrow, title, text, active, action }: { eyebrow: string; title: string; text: string; active: Page; action?: ReactNode }) {
   return (
     <>
       <SiteHeader active={active} />
@@ -61,6 +61,7 @@ export function PageHero({ eyebrow, title, text, active }: { eyebrow: string; ti
         <div className="eyebrow"><span /> {eyebrow}</div>
         <h1>{title}</h1>
         <p>{text}</p>
+        {action ? <div className="page-hero-action">{action}</div> : null}
         <div className="page-index" aria-hidden="true">DIUPAV / PR</div>
       </section>
     </>

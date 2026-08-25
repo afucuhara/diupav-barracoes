@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { PageHero, SiteFooter, WhatsAppIcon } from '../components';
+import { whatsappUrl } from '../site-data';
 
 export const metadata: Metadata = { title: 'Contato e Orçamento | DiuPav Barracões', description: 'Solicite seu orçamento diretamente pelo WhatsApp com a equipe da DiuPav Barracões.' };
 
@@ -7,7 +8,7 @@ const contacts = [
   {
     name: 'Antonio C. Diurkowski',
     phone: '(41) 98837-5050',
-    url: 'https://wa.me/5541988375050?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.',
+    url: whatsappUrl,
   },
   {
     name: 'Ingrid Pacheco',
@@ -18,7 +19,13 @@ const contacts = [
 
 export default function ContactPage() {
   return <main id="main-content" tabIndex={-1}>
-    <PageHero active="contato" eyebrow="Atendimento direto" title="Seu projeto começa com uma boa conversa" text="Fale exclusivamente pelo WhatsApp com a equipe da DiuPav Barracões. Um atendimento próximo para entender sua necessidade e indicar o melhor caminho." />
+    <PageHero
+      active="contato"
+      eyebrow="Atendimento direto"
+      title="Seu projeto começa com uma boa conversa"
+      text="Fale exclusivamente pelo WhatsApp com a equipe da DiuPav Barracões. Um atendimento próximo para entender sua necessidade e indicar o melhor caminho."
+      action={<a className="button button-primary contact-hero-cta" href={whatsappUrl} target="_blank" rel="noreferrer"><span>Solicitar orçamento no WhatsApp</span><WhatsAppIcon /></a>}
+    />
     <section className="whatsapp-contact-section">
       <div className="whatsapp-intro">
         <div className="section-kicker">Orçamento pelo WhatsApp</div>

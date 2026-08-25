@@ -144,6 +144,10 @@ h1 em { color: var(--green); font-style: normal; }
 .page-hero .eyebrow, .page-hero h1, .page-hero p { position: relative; z-index: 2; }
 .page-hero h1 { font-size: clamp(60px, 7vw, 106px); max-width: 1050px; margin-top: 29px; }
 .page-hero p { font-size: 18px; color: #60709a; line-height: 1.6; max-width: 690px; margin: 29px 0 0; }
+.page-hero-action { position: relative; z-index: 2; margin-top: 26px; }
+.contact-hero-cta { gap: 10px; width: fit-content; color: var(--white); }
+.contact-hero-cta span { margin-left: 0; }
+.contact-hero-cta .whatsapp-icon { width: 21px; height: 21px; }
 .page-index { position: absolute; right: clamp(30px, 7vw, 108px); bottom: 35px; color: rgba(0,33,250,.42); font-size: 10px; letter-spacing: .16em; z-index: 2; }
 .page-hero-sobre { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.89) 47%, rgba(233,240,255,.36) 100%), url('/images/hero-industrial-generated.png') center/cover; }
 .page-hero-sobre::after { display: none; }
@@ -295,7 +299,7 @@ h1 em { color: var(--green); font-style: normal; }
   .about-number { padding: 55px 22px; min-height: 355px; }.about-number strong { font-size: 210px; }.about-copy { padding: 75px 22px; }
   .budget-cta { padding: 82px 22px; min-height: 590px; }.budget-cta h2 { font-size: 68px; }
   .site-footer { padding: 40px 22px 18px; }.footer-main { grid-template-columns: 1fr; gap: 32px; padding-bottom: 28px; }.footer-bottom { flex-direction: column; gap: 10px; }
-  .page-hero { min-height: 560px; padding: 150px 22px 70px; }.page-hero h1 { font-size: 60px; }.page-hero p { font-size: 16px; }
+  .page-hero { min-height: 560px; padding: 150px 22px 70px; }.page-hero h1 { font-size: 60px; }.page-hero p { font-size: 16px; }.contact-hero-cta { width: 100%; }
   .content-split { padding: 78px 22px; grid-template-columns: 1fr; gap: 35px; }.content-split h2, .catalog-intro h2, .values-section > h2 { font-size: 51px; }
   .mission-grid { margin: 0 22px 78px; grid-template-columns: 1fr; }.mission-grid article { padding: 33px; min-height: 320px; }.mission-grid article + article { border-left: 0; border-top: 1px solid var(--line); }.mission-grid h3 { margin-top: 55px; }
   .principles-grid { margin: 0 22px 78px; grid-template-columns: 1fr; }.principles-grid article { min-height: auto; padding: 32px; }.principles-grid article + article { border-left: 0; border-top: 1px solid var(--line); }
