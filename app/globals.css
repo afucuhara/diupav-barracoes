@@ -19,7 +19,7 @@ button { border: 0; cursor: pointer; }
 .main-nav a { color: var(--text-muted); min-height: 44px; padding-inline: 2px; display: inline-flex; align-items: center; transition: color .2s ease; position: relative; }
 .main-nav a:hover, .main-nav a.active { color: var(--green-dark); }
 .main-nav a.active::after { display: none; }
-.header-cta { justify-self: end; background: var(--green); color: white; padding: 14px 20px; border-radius: 999px; font-size: 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 9px; box-shadow: 0 10px 22px rgba(52,42,239,.22); transition: transform .2s ease, box-shadow .2s ease; }
+.header-cta { justify-self: end; background: #342aef; color: white; padding: 14px 20px; border-radius: 999px; font-size: 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 9px; box-shadow: 0 10px 22px rgba(52,42,239,.22); transition: transform .2s ease, box-shadow .2s ease; }
 .header-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(52,42,239,.3); }
 .button span { margin-left: 13px; }
 .mobile-menu { display: none; }
@@ -36,12 +36,12 @@ button { border: 0; cursor: pointer; }
 .eyebrow span { width: 27px; height: 2px; background: var(--green); }
 h1, h2 { font-family: var(--font-barlow-condensed), sans-serif; text-transform: uppercase; margin: 0; }
 h1 { max-width: 750px; margin-top: 28px; font-size: clamp(58px, 6.2vw, 98px); line-height: .89; letter-spacing: -.025em; font-weight: 700; }
-h1 em { color: var(--green); font-style: normal; }
+h1 em { color: #342aef; font-style: normal; }
 .hero-content > p { max-width: 650px; margin: 28px 0 0; color: rgba(255,255,255,.72); font-size: 18px; line-height: 1.58; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 39px; }
 .button { min-height: 53px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-size: 14px; font-weight: 700; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
 .button:hover { transform: translateY(-2px); }
-.button-primary { background: var(--green); color: white; box-shadow: 0 12px 26px rgba(52,42,239,.24); }
+.button-primary { background: #342aef; color: white; box-shadow: 0 12px 26px rgba(52,42,239,.24); }
 .button-secondary { border: 1px solid rgba(255,255,255,.52); color: white; background: rgba(52,42,239,.18); backdrop-filter: blur(8px); }
 .whatsapp-icon { display: block; width: 24px; height: 24px; flex: 0 0 auto; }
 .header-cta .whatsapp-icon, .button-primary .whatsapp-icon { filter: brightness(0) invert(1); }
