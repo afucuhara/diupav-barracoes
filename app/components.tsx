@@ -24,6 +24,7 @@ export function Brand({ priority = false }: { priority?: boolean }) {
         width={2172}
         height={724}
         priority={priority}
+        unoptimized
         sizes="(max-width: 650px) 293px, 368px"
       />
     </span>
