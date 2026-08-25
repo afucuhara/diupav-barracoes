@@ -21,7 +21,7 @@ export default function ServicesPage() {
   return <main id="main-content" tabIndex={-1}>
     <PageHero active="servicos" eyebrow="Serviços e soluções" title="Soluções para diferentes necessidades de construção" text="Projetos comerciais, industriais, rurais e empresariais atendidos com precisão, qualidade e responsabilidade." />
     <section className="catalog-intro"><div className="section-kicker">O que fazemos</div><h2>Da estrutura aos componentes.</h2><p>Integramos soluções pré-moldadas e metálicas para oferecer mais consistência, agilidade e confiança à sua construção.</p></section>
-    <section className="catalog-list">{services.map((service, index) => <article key={service.number}><div className="catalog-photo"><Image src={service.image} alt={`Exemplo de ${service.title}`} fill sizes="(max-width: 650px) 105px, (max-width: 980px) 150px, 170px" loading="lazy" /></div><h3>{service.title}</h3><p>{details[index]}</p></article>)}</section>
+    <section className="catalog-list">{services.map((service, index) => <article key={service.number}><div className="catalog-photo"><Image src={service.image} alt={`Exemplo de ${service.title}`} fill sizes="(max-width: 650px) 105px, (max-width: 980px) 150px, 170px" loading="lazy" unoptimized /></div><h3>{service.title}</h3><p>{details[index]}</p></article>)}</section>
     <BudgetCta /><SiteFooter />
   </main>;
 }

@@ -31,7 +31,7 @@ export default function Home() {
       <SiteHeader active="inicio" />
       <section className="hero" id="inicio">
         <div className="hero-slides" aria-hidden="true">
-          {heroSlides.map((image, index) => visibleSlides.has(index) && <div key={image} className={`hero-slide ${index === slide ? 'active' : ''} ${index === previousSlide ? 'leaving' : ''}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(251,252,255,.98) 0%, rgba(251,252,255,.94) 30%, rgba(251,252,255,.7) 46%, rgba(251,252,255,0) 66%), url('${image}')` }} />)}
+          {heroSlides.map((image, index) => visibleSlides.has(index) && <div key={image} className={`hero-slide ${index === slide ? 'active' : ''} ${index === previousSlide ? 'leaving' : ''}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(251,252,255,.98) 0%, rgba(251,252,255,.97) 48%, rgba(251,252,255,.84) 62%, rgba(251,252,255,.35) 70%, rgba(251,252,255,0) 78%), url('${image}')` }} />)}
         </div>
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-content">
@@ -59,7 +59,7 @@ export default function Home() {
       <Reveal variant="scale"><section className="services-grid" aria-label="Serviços em destaque">
         {services.map((service) => (
           <article className="service-card" key={service.number}>
-            <Image className="service-card-image" src={service.image} alt={`Projeto de ${service.title}`} fill sizes="(max-width: 650px) calc(100vw - 44px), (max-width: 980px) calc(50vw - 45px), 30vw" loading="lazy" />
+            <Image className="service-card-image" src={service.image} alt={`Projeto de ${service.title}`} fill sizes="(max-width: 650px) calc(100vw - 44px), (max-width: 980px) calc(50vw - 45px), 30vw" loading="lazy" unoptimized />
             <h3>{service.title}</h3>
             <p>{service.short}</p>
             <Link href="/servicos">Saiba mais</Link>

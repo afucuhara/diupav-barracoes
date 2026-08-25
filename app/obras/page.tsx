@@ -26,7 +26,7 @@ export default function WorksPage() {
           </div>
           <div className="works-gallery">
             {Array.from({ length: 6 }, (_, index) => <figure className={`works-photo ${index === 0 ? 'featured' : ''}`} key={index}>
-              <Image src={`/images/obras/${project.slug}-${String(index + 1).padStart(2, '0')}.webp`} alt={`${project.title} — imagem ${index + 1} da obra`} fill sizes="(max-width: 650px) 50vw, (max-width: 980px) 33vw, 30vw" loading="lazy" />
+              <Image src={`/images/obras/${project.slug}-${String(index + 1).padStart(2, '0')}.webp`} alt={`${project.title} — imagem ${index + 1} da obra`} fill sizes="(max-width: 650px) 50vw, (max-width: 980px) 33vw, 30vw" loading="lazy" unoptimized />
             </figure>)}
           </div>
         </section>
