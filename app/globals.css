@@ -86,7 +86,7 @@ h1 em { color: #0000ff; font-style: normal; }
 .section-action { display: flex; justify-content: flex-end; padding: 35px clamp(30px, 7vw, 108px) 105px; }
 .text-link { min-height: 44px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding-bottom: 9px; border-bottom: 2px solid var(--green); display: inline-flex; align-items: center; gap: 28px; }
 
-.made-to-order { background: linear-gradient(90deg, #f1f5ff 0%, rgba(241,245,255,.98) 38%, rgba(241,245,255,.52) 57%, rgba(241,245,255,.06) 73%), url('/images/hero-industrial-generated.png') center right/cover no-repeat; color: var(--ink); min-height: 610px; display: grid; grid-template-columns: .9fr 1.1fr; overflow: hidden; border-block: 1px solid #d9e1ff; }
+.made-to-order { background: linear-gradient(90deg, #f1f5ff 0%, rgba(241,245,255,.98) 38%, rgba(241,245,255,.52) 57%, rgba(241,245,255,.06) 73%), url('/images/hero-industrial-generated.webp') center right/cover no-repeat; color: var(--ink); min-height: 610px; display: grid; grid-template-columns: .9fr 1.1fr; overflow: hidden; border-block: 1px solid #d9e1ff; }
 .order-copy { padding: 96px clamp(30px, 7vw, 108px); position: relative; z-index: 2; }
 .light-kicker { color: var(--white); }
 .order-copy h2 { font-size: clamp(58px, 6vw, 86px); line-height: .88; }
@@ -115,7 +115,7 @@ h1 em { color: #0000ff; font-style: normal; }
 .about-copy p { color: var(--text-body); max-width: 610px; font-size: 17px; line-height: 1.65; margin: 26px 0 40px; }
 .light-link { color: white; width: fit-content; }
 
-.budget-cta { min-height: 565px; padding: 90px clamp(30px, 7vw, 108px); background: linear-gradient(90deg, rgba(0,0,255,.94) 0%, rgba(0,0,255,.84) 48%, rgba(0,0,255,.64) 100%), url('/images/estrutura-metalica.jpg') center/cover; color: white; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.budget-cta { min-height: 565px; padding: 90px clamp(30px, 7vw, 108px); background: linear-gradient(90deg, rgba(0,0,255,.94) 0%, rgba(0,0,255,.84) 48%, rgba(0,0,255,.64) 100%), url('/images/estrutura-metalica.webp') center/cover; color: white; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
 .budget-cta .button-primary { background: var(--accent); box-shadow: 0 12px 26px rgba(255,0,0,.24); }
 .budget-cta .button-primary:hover { box-shadow: 0 16px 32px rgba(255,0,0,.32); }
 .budget-cta h2 { font-size: clamp(66px, 8vw, 116px); line-height: .78; position: relative; z-index: 2; }
@@ -162,7 +162,7 @@ h1 em { color: #0000ff; font-style: normal; }
 .page-hero-contato { background: linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(247,249,255,.9) 46%, rgba(234,240,255,.34) 100%), url('/images/hero-real-contact.webp') center/cover; }
 .page-hero-contato::after, .page-hero-contato .page-hero-grid, .page-hero-contato .page-index { display: none; }
 .page-hero-contato .eyebrow span { display: none; }
-.page-hero-obras { background: linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(247,249,255,.9) 46%, rgba(234,240,255,.34) 100%), url('/images/obras/obra-03-03.webp') center/cover; }
+.page-hero-obras { background: linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(247,249,255,.9) 46%, rgba(234,240,255,.34) 100%), url('/images/obras/cobertura-comercial-03.webp') center/cover; }
 .page-hero-obras::after, .page-hero-obras .page-hero-grid, .page-hero-obras .page-index { display: none; }
 .page-hero-obras .eyebrow span { display: none; }
 .content-split { padding: 110px clamp(30px, 7vw, 108px); display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; }

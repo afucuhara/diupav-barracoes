@@ -19,7 +19,7 @@ export function Brand({ priority = false }: { priority?: boolean }) {
   return (
     <span className="brand">
       <Image
-        src="/diupav-logo.png"
+        src="/diupav-logo.webp"
         alt="DiuPav Barracões"
         width={2172}
         height={724}

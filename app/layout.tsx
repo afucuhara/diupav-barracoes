@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     siteName: 'DiuPav Barracões',
     locale: 'pt_BR',
     type: 'website',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'DiuPav Barracões — estruturas pré-moldadas e metálicas' }],
+    images: [{ url: '/og.webp', width: 1200, height: 630, alt: 'DiuPav Barracões — estruturas pré-moldadas e metálicas' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'DiuPav Barracões | Estruturas Pré-Moldadas e Metálicas',
     description: 'Soluções sob encomenda para construir com resistência, qualidade e confiança.',
-    images: ['/og.png'],
+    images: ['/og.webp'],
   },
 };
 

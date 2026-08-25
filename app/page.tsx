@@ -59,7 +59,7 @@ export default function Home() {
       <Reveal variant="scale"><section className="services-grid" aria-label="Serviços em destaque">
         {services.map((service) => (
           <article className="service-card" key={service.number}>
-            <Image className="service-card-image" src={service.image} alt="" fill sizes="(max-width: 650px) calc(100vw - 44px), (max-width: 980px) calc(50vw - 45px), 30vw" loading="lazy" />
+            <Image className="service-card-image" src={service.image} alt={`Projeto de ${service.title}`} fill sizes="(max-width: 650px) calc(100vw - 44px), (max-width: 980px) calc(50vw - 45px), 30vw" loading="lazy" />
             <h3>{service.title}</h3>
             <p>{service.short}</p>
             <Link href="/servicos">Saiba mais</Link>
