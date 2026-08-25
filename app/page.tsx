@@ -12,7 +12,7 @@ const differentials = [
 ];
 
 export default function Home() {
-  const heroSlides = ['/images/hero-real-home.webp'];
+  const heroSlides = ['/images/hero-real-home.webp', '/images/hero-real-finished.webp', '/images/hero-real-assembly.webp'];
   const [slide, setSlide] = useState(0);
   const [previousSlide, setPreviousSlide] = useState<number | null>(null);
   const transitionTimer = useRef<number | null>(null);
@@ -22,7 +22,7 @@ export default function Home() {
       if (transitionTimer.current) window.clearTimeout(transitionTimer.current);
       transitionTimer.current = window.setTimeout(() => setPreviousSlide(null), 1800);
       return (current + 1) % heroSlides.length;
-    }), 7000);
+    }), 5000);
     return () => { window.clearInterval(timer); if (transitionTimer.current) window.clearTimeout(transitionTimer.current); };
   }, [heroSlides.length]);
   const visibleSlides = new Set([slide, previousSlide, (slide + 1) % heroSlides.length]);
