@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/diupav/public_html/
+    - npm install --omit=dev
+    - npm run build
+    - /bin/cp -R dist/* $DEPLOYPATH
