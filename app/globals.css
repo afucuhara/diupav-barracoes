@@ -149,14 +149,14 @@ h1 em { color: var(--green); font-style: normal; }
 .contact-hero-cta span { margin-left: 0; }
 .contact-hero-cta .whatsapp-icon { width: 21px; height: 21px; }
 .page-index { position: absolute; right: clamp(30px, 7vw, 108px); bottom: 35px; color: rgba(0,33,250,.42); font-size: 10px; letter-spacing: .16em; z-index: 2; }
-.page-hero-sobre { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.89) 47%, rgba(233,240,255,.36) 100%), url('/images/hero-industrial-generated.png') center/cover; }
+.page-hero-sobre { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.89) 47%, rgba(233,240,255,.36) 100%), url('/images/hero-real-about.webp') center/cover; }
 .page-hero-sobre::after { display: none; }
 .page-hero-sobre .page-hero-grid { opacity: .035; }
 .page-hero-sobre .eyebrow span { display: none; }
-.page-hero-servicos { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.9) 46%, rgba(233,240,255,.34) 100%), url('/images/hero-industrial-generated.png') center/cover; }
+.page-hero-servicos { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.9) 46%, rgba(233,240,255,.34) 100%), url('/images/hero-real-services.webp') center/cover; }
 .page-hero-servicos::after, .page-hero-servicos .page-hero-grid, .page-hero-servicos .page-index { display: none; }
 .page-hero-servicos .eyebrow span { display: none; }
-.page-hero-contato { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.9) 46%, rgba(233,240,255,.34) 100%), url('/images/estrutura-metalica.jpg') center/cover; }
+.page-hero-contato { background: linear-gradient(90deg, rgba(249,251,255,.98) 0%, rgba(244,248,255,.9) 46%, rgba(233,240,255,.34) 100%), url('/images/hero-real-contact.webp') center/cover; }
 .page-hero-contato::after, .page-hero-contato .page-hero-grid, .page-hero-contato .page-index { display: none; }
 .page-hero-contato .eyebrow span { display: none; }
 .content-split { padding: 110px clamp(30px, 7vw, 108px); display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; }

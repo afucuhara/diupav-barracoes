@@ -12,7 +12,7 @@ const differentials = [
 ];
 
 export default function Home() {
-  const heroSlides = ['/images/hero-industrial-generated.png', '/images/estrutura-metalica.jpg', '/images/hero-barracao.jpg'];
+  const heroSlides = ['/images/hero-real-home.webp'];
   const [slide, setSlide] = useState(0);
   const [previousSlide, setPreviousSlide] = useState<number | null>(null);
   const transitionTimer = useRef<number | null>(null);
