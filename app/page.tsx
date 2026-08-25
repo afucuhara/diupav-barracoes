@@ -31,7 +31,7 @@ export default function Home() {
       <SiteHeader active="inicio" />
       <section className="hero" id="inicio">
         <div className="hero-slides" aria-hidden="true">
-          {heroSlides.map((image, index) => visibleSlides.has(index) && <div key={image} className={`hero-slide ${index === slide ? 'active' : ''} ${index === previousSlide ? 'leaving' : ''}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(6,11,27,.92) 0%, rgba(10,24,70,.78) 46%, rgba(52,42,239,.14) 100%), url('${image}')` }} />)}
+          {heroSlides.map((image, index) => visibleSlides.has(index) && <div key={image} className={`hero-slide ${index === slide ? 'active' : ''} ${index === previousSlide ? 'leaving' : ''}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(24,18,112,.94) 0%, rgba(52,42,239,.66) 46%, rgba(52,42,239,.16) 100%), url('${image}')` }} />)}
         </div>
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-content">
@@ -62,7 +62,7 @@ export default function Home() {
             <Image className="service-card-image" src={service.image} alt="" fill sizes="(max-width: 650px) calc(100vw - 44px), (max-width: 980px) calc(50vw - 45px), 30vw" loading="lazy" />
             <h3>{service.title}</h3>
             <p>{service.short}</p>
-            <Link href="/servicos">Saiba mais <span aria-hidden="true">↗</span></Link>
+            <Link href="/servicos">Saiba mais</Link>
           </article>
         ))}
       </section></Reveal>
