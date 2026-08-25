@@ -1,0 +1,43 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { BudgetCta, PageHero, Reveal, SiteFooter } from '../components';
+
+export const metadata: Metadata = {
+  title: 'Obras Realizadas | DiuPav Barracões',
+  description: 'Conheça alguns projetos concluídos pela DiuPav Barracões em estruturas pré-moldadas e metálicas.',
+};
+
+const projects = [
+  { title: 'Residência e área integrada', category: 'Estrutura pré-moldada', photos: 1 },
+  { title: 'Barracão industrial', category: 'Estrutura metálica e fechamento', photos: 2 },
+  { title: 'Cobertura comercial', category: 'Estrutura pré-moldada e cobertura', photos: 3 },
+  { title: 'Estrutura para área coberta', category: 'Projeto sob medida', photos: 4 },
+];
+
+export default function WorksPage() {
+  return <main id="main-content" tabIndex={-1}>
+    <PageHero active="obras" eyebrow="Projetos concluídos" title="Obras que mostram a força de cada estrutura" text="Uma seleção de projetos realizados pela DiuPav Barracões, com soluções construídas para atender diferentes necessidades." />
+    <section className="works-intro">
+      <div className="section-kicker">Portfólio de obras</div>
+      <h2>Da fundação à entrega, estruturas feitas para durar.</h2>
+      <p>Confira alguns registros de obras concluídas. Cada projeto é desenvolvido de acordo com as necessidades do cliente, unindo qualidade, segurança e execução cuidadosa.</p>
+    </section>
+    <div className="works-projects">
+      {projects.map((project, projectIndex) => <Reveal key={project.title} variant={projectIndex % 2 === 0 ? 'left' : 'right'}>
+        <section className="works-project" aria-labelledby={`work-${project.photos}`}>
+          <div className="works-project-heading">
+            <div><span>{project.category}</span><h2 id={`work-${project.photos}`}>{project.title}</h2></div>
+            <p>Registros fotográficos de uma obra executada pela DiuPav Barracões.</p>
+          </div>
+          <div className="works-gallery">
+            {Array.from({ length: 6 }, (_, index) => <figure className={`works-photo ${index === 0 ? 'featured' : ''}`} key={index}>
+              <Image src={`/images/obras/obra-${String(project.photos).padStart(2, '0')}-${String(index + 1).padStart(2, '0')}.webp`} alt={`${project.title} — imagem ${index + 1} da obra`} fill sizes="(max-width: 650px) 50vw, (max-width: 980px) 33vw, 30vw" loading="lazy" />
+            </figure>)}
+          </div>
+        </section>
+      </Reveal>)}
+    </div>
+    <BudgetCta />
+    <SiteFooter />
+  </main>;
+}

@@ -5,12 +5,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { whatsappUrl } from './site-data';
 
-type Page = 'inicio' | 'sobre' | 'servicos' | 'contato';
+type Page = 'inicio' | 'sobre' | 'servicos' | 'obras' | 'contato';
 
 const nav = [
   ['inicio', '/', 'Início'],
   ['sobre', '/sobre', 'A empresa'],
   ['servicos', '/servicos', 'Serviços'],
+  ['obras', '/obras', 'Obras'],
   ['contato', '/contato', 'Contato'],
 ] as const;
 
@@ -88,7 +89,7 @@ export function SiteFooter() {
       <footer className="site-footer">
       <div className="footer-main">
         <div><Brand /><p>Estruturas pré-moldadas e metálicas para construir com segurança, qualidade e confiança.</p></div>
-        <div><strong>Navegação</strong><a href="/sobre">A empresa</a><a href="/servicos">Serviços</a><a href="/contato">Contato</a></div>
+        <div><strong>Navegação</strong><a href="/sobre">A empresa</a><a href="/servicos">Serviços</a><a href="/obras">Obras</a><a href="/contato">Contato</a></div>
         <div><strong>Atendimento por WhatsApp</strong><a href="https://wa.me/5541988375050" target="_blank" rel="noreferrer">Antonio · (41) 98837-5050</a><a href="https://wa.me/5541992021680" target="_blank" rel="noreferrer">Ingrid · (41) 99202-1680</a></div>
         <div><strong>Localização</strong><p>Rua Oito, Distrito Mato Branco<br />Contenda / Paraná<br />CEP 83730-000</p></div>
         <div><strong>Redes sociais</strong><div className="social-links"><a href="https://www.facebook.com/diupav/" target="_blank" rel="noreferrer" aria-label="Facebook da DiuPav"><Image src="/facebook.svg" alt="" width={22} height={22} unoptimized /></a><a href="https://www.instagram.com/diupav/" target="_blank" rel="noreferrer" aria-label="Instagram da DiuPav"><Image src="/instagram.svg" alt="" width={22} height={22} unoptimized /></a></div></div>
