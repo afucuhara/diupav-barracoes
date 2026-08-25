@@ -2,6 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/diupav/public_html/
-    - npm install
-    - npm run build:static
-    - /bin/cp -R dist/client/. $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R public_html/. $DEPLOYPATH
