@@ -17,11 +17,6 @@ const projects = [
 export default function WorksPage() {
   return <main id="main-content" tabIndex={-1}>
     <PageHero active="obras" eyebrow="Projetos concluídos" title="Obras que mostram a força de cada estrutura" text="Uma seleção de projetos realizados pela DiuPav Barracões, com soluções construídas para atender diferentes necessidades." />
-    <section className="works-intro">
-      <div className="section-kicker">Portfólio de obras</div>
-      <h2>Da fundação à entrega, estruturas feitas para durar.</h2>
-      <p>Confira alguns registros de obras concluídas. Cada projeto é desenvolvido de acordo com as necessidades do cliente, unindo qualidade, segurança e execução cuidadosa.</p>
-    </section>
     <div className="works-projects">
       {projects.map((project, projectIndex) => <Reveal key={project.title} variant={projectIndex % 2 === 0 ? 'left' : 'right'}>
         <section className="works-project" aria-labelledby={`work-${project.photos}`}>
