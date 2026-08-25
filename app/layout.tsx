@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.diupav.com.br'),
   title: 'DiuPav Barracões | Estruturas Pré-Moldadas e Metálicas',
   description: 'Barracões pré-moldados, estruturas metálicas, fechamentos, mezaninos, pisos, portas, treliças e soluções sob encomenda em Contenda, Lapa e região.',
+  icons: { icon: '/favicon.png', shortcut: '/favicon.png', apple: '/favicon.png' },
   openGraph: {
     title: 'DiuPav Barracões | Estruturas Pré-Moldadas e Metálicas',
     description: 'Soluções sob encomenda para construir com resistência, qualidade e confiança.',

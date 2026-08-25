@@ -76,7 +76,7 @@ export default function Home() {
       <Reveal><section className="differentials" id="empresa">
         <div className="differentials-head"><div className="section-kicker">Por que a DiuPav</div><h2>Compromisso que sustenta grandes ideias.</h2></div>
         <div className="difference-list">
-          {differentials.map((item) => <div key={item}><strong>{item}</strong><i aria-hidden="true">+</i></div>)}
+          {differentials.map((item) => <div key={item}><strong>{item}</strong></div>)}
         </div>
       </section></Reveal>
 
