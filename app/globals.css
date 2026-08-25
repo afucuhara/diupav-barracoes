@@ -24,7 +24,7 @@ button { border: 0; cursor: pointer; }
 .button span { margin-left: 13px; }
 .mobile-menu { display: none; }
 
-.hero { min-height: 760px; color: white; display: block; position: relative; overflow: hidden; }
+.hero { min-height: 760px; color: var(--ink); display: block; position: relative; overflow: hidden; background: var(--paper); }
 .hero-slides { position: absolute; inset: 0; z-index: 0; background: var(--brand); }
 .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.7s ease-in-out; }
 .hero-slide.active { opacity: 1; }
@@ -37,12 +37,12 @@ button { border: 0; cursor: pointer; }
 h1, h2 { font-family: var(--font-barlow-condensed), sans-serif; text-transform: uppercase; margin: 0; }
 h1 { max-width: 750px; margin-top: 28px; font-size: clamp(58px, 6.2vw, 98px); line-height: .89; letter-spacing: -.025em; font-weight: 700; }
 h1 em { color: #0000ff; font-style: normal; }
-.hero-content > p { max-width: 650px; margin: 28px 0 0; color: rgba(255,255,255,.72); font-size: 18px; line-height: 1.58; }
+.hero-content > p { max-width: 650px; margin: 28px 0 0; color: var(--text-body); font-size: 18px; line-height: 1.58; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 39px; }
 .button { min-height: 53px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-size: 14px; font-weight: 700; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { background: #0000ff; color: white; box-shadow: 0 12px 26px rgba(0,0,255,.24); }
-.button-secondary { border: 1px solid rgba(255,255,255,.52); color: white; background: rgba(0,0,255,.18); backdrop-filter: blur(8px); }
+.button-secondary { border: 1px solid rgba(0,0,255,.32); color: var(--ink); background: rgba(255,255,255,.68); backdrop-filter: blur(8px); }
 .whatsapp-icon { display: block; width: 24px; height: 24px; flex: 0 0 auto; }
 .header-cta .whatsapp-icon, .button-primary .whatsapp-icon { filter: brightness(0) invert(1); }
 .hero-eyebrow span { display: none; }

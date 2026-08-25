@@ -31,7 +31,7 @@ export default function Home() {
       <SiteHeader active="inicio" />
       <section className="hero" id="inicio">
         <div className="hero-slides" aria-hidden="true">
-          {heroSlides.map((image, index) => visibleSlides.has(index) && <div key={image} className={`hero-slide ${index === slide ? 'active' : ''} ${index === previousSlide ? 'leaving' : ''}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(0,0,82,.82) 0%, rgba(0,0,150,.62) 28%, rgba(0,0,255,.28) 43%, rgba(0,0,255,0) 58%), url('${image}')` }} />)}
+          {heroSlides.map((image, index) => visibleSlides.has(index) && <div key={image} className={`hero-slide ${index === slide ? 'active' : ''} ${index === previousSlide ? 'leaving' : ''}`} style={{ backgroundImage: `linear-gradient(90deg, rgba(251,252,255,.98) 0%, rgba(251,252,255,.94) 30%, rgba(251,252,255,.7) 46%, rgba(251,252,255,0) 66%), url('${image}')` }} />)}
         </div>
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-content">
