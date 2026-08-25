@@ -25,7 +25,7 @@ button { border: 0; cursor: pointer; }
 .mobile-menu { display: none; }
 
 .hero { min-height: 760px; color: var(--ink); display: block; position: relative; overflow: hidden; background: var(--paper); }
-.hero-slides { position: absolute; inset: 0; z-index: 0; background: var(--brand); }
+.hero-slides { position: absolute; inset: 0; z-index: 0; background: var(--paper); }
 .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.7s ease-in-out; }
 .hero-slide.active { opacity: 1; }
 .hero-slide.active, .hero-slide.leaving { will-change: opacity; }
