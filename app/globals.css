@@ -27,7 +27,7 @@ button { border: 0; cursor: pointer; }
 .hero { min-height: 760px; color: var(--ink); display: block; position: relative; overflow: hidden; background: var(--paper); }
 .hero::before { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(251,252,255,.98) 0%, rgba(251,252,255,.97) 48%, rgba(251,252,255,.84) 62%, rgba(251,252,255,.35) 70%, rgba(251,252,255,0) 78%); }
 .hero-slides { position: absolute; inset: 0; z-index: 0; background: var(--paper); }
-.hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.7s ease-in-out; }
+.hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: none; }
 .hero-slide.active { opacity: 1; }
 .hero-slide.active, .hero-slide.leaving { will-change: opacity; }
 .hero-slide.leaving { opacity: 0; }
