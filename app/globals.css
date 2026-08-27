@@ -225,6 +225,7 @@ h1 em { color: #0000ff; font-style: normal; }
 .works-photo.featured { grid-column: span 2; grid-row: span 2; }
 .works-photo img { object-fit: cover; transition: transform .5s var(--ease-out); }
 .works-photo:hover img { transform: scale(1.045); }
+.works-photo.watermarked::after { content: ''; position: absolute; z-index: 2; pointer-events: none; width: min(42%, 330px); aspect-ratio: 3 / 1; right: 5%; bottom: 6%; background: url('/diupav-logo.webp') center / contain no-repeat; opacity: .32; filter: grayscale(1) brightness(0) invert(1); }
 
 .product-section { padding: 105px clamp(30px, 7vw, 108px); }
 .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 52px; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
